@@ -34,6 +34,29 @@ body {
     animation:spinReverse 2s infinite, fadeInOut 1.6s infinite;
 }
 
+.loadbar-container {
+    width:350px;
+    display:flex;
+    align-items:center;
+    padding-left:30px;
+}
+
+.loadbar {
+    width:80%;
+    height:10px;
+    border:1px solid white;
+    margin:0 var(--size-20) 0 var(--size-34);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.loadbar-progress {
+    width:0;
+    height:100%;
+    background-color:white;
+    animation:progressRight 5s forwards;
+}
+
 @keyframes spin {
     to { transform:rotate(360deg); }
 }
@@ -50,5 +73,11 @@ body {
     50% {
         opacity:1;
         visibility:visible;
+    }
+}
+
+@keyframes progressRight {
+    to {
+        width: 100%;
     }
 }
