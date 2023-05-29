@@ -8,4 +8,4 @@ const timer = setInterval(function(){
    } else {
       return clearTimeout(timer);
    }
-}, 30);
+}, 50);
