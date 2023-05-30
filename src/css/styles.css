@@ -1,87 +1,101 @@
 body {
-    background-color:#000;
+  background-color: #000;
 }
 
 .absolute-center {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .load-container {
-    color:white;
-    margin-top:var(--size-130);
-    flex-direction:column;
+  color: white;
+  margin-top: var(--size-130);
+  flex-direction: column;
+  animation: fadeOut .7s linear 5s forwards;
+
 }
 
 .load-spinner {
-    border:6px solid;
-    border-color:white transparent white transparent;
-    border-radius:50%;
-    margin-bottom:var(--size-50);
-    width:var(--size-130);
-    height:var(--size-130);
-    position:relative;
-    animation:spin 2s ease infinite;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  border: 6px solid;
+  border-color: white transparent white transparent;
+  border-radius: 50%;
+  margin-bottom: var(--size-50);
+  width: var(--size-130);
+  height: var(--size-130);
+  position: relative;
+  animation: spin 2s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-container {
-    font-size:1.2rem;
-    animation:spinReverse 2s infinite, fadeInOut 1.6s infinite;
+  font-size: 1.2rem;
+  animation: spinReverse 2s infinite, fadeInOut 1.6s infinite;
 }
 
 .loadbar-container {
-    width:300px;
-    display:flex;
-    align-items:center;
-    padding-left:60px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
 }
 
 .loadbar {
-    width:250px;
-    height:10px;
-    border:1px solid white;
-    border-radius:10px;
-    overflow:hidden;
-    justify-self:center;
-    margin-right:10px;
+  width: 250px;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  justify-self: center;
+  margin-right: 10px;
 }
 
 .loadbar-progress {
-    width:0;
-    height:100%;
-    background-color:white;
-    animation: progressRight 5s ease infinite;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  animation: progressRight 4s ease forwards;
 }
 
 .load-percent {
-    width:50px;
+  width: 50px;
 }
 
 @keyframes spin {
-    to { transform:rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spinReverse {
-    to { transform:rotate(-360deg); }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @keyframes fadeInOut {
-    0%, 100% {
-        opacity:0;
-        visibility:hidden;
-    } 
-    50% {
-        opacity:1;
-        visibility:visible;
-    }
+  0%,
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @keyframes progressRight {
+  to {
+    width:100%;
+  }
+}
+
+@keyframes fadeOut {
     to {
-        width: 100%;
+        opacity:0;
+        visibility:hidden;
     }
 }
