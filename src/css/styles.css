@@ -8,12 +8,19 @@ body {
   align-items: center;
 }
 
+.loading-section,
+.main-menu-section {
+  position:absolute;
+  right:0;
+  left:0;
+  bottom:0;
+  top:0;
+}
+
 .load-container {
   color: white;
   margin-top: var(--size-130);
   flex-direction: column;
-  animation: fadeOut .7s linear 5s forwards;
-
 }
 
 .load-spinner {
@@ -63,6 +70,72 @@ body {
   width: 50px;
 }
 
+.main-menu-section {
+  z-index:5;
+}
+
+.main-menu {
+  width:600px;
+  border:1px inset silver;
+  background-color:blue;
+  color:white;
+  margin-top:var(--size-50);
+  position:relative;
+  transform:translateX(-50%);
+  opacity:0;
+}
+
+.main-menu h2 {
+  text-align:center; 
+  border-bottom:1px solid silver;
+  line-height:3;
+  margin:0;
+}
+
+.menu-body li {
+  padding:10px 0;
+  border-bottom:1px solid silver;
+  width:200px;
+  position:relative;
+  text-align:right;
+  letter-spacing:2px;
+  background-color:rgb(15, 52, 163);
+  cursor:pointer;
+  transition: padding 0.5s, background-color 0.5s;
+}
+
+.menu-body li:hover {
+  padding-left:var(--size-20);
+  background-color:rgb(27, 64, 176);
+}
+
+.menu-body li:last-child {
+  border-bottom:none;
+}
+
+.menu-body li::after {
+  content:"";
+  height:0;
+  width:0;
+  border:22px solid;
+  border-color: transparent transparent transparent rgb(15, 52, 163);
+  position:absolute;
+  top:0;
+  transition:border-color .5s;
+}
+
+.menu-body li:hover::after {
+  border-color: transparent transparent transparent rgb(27, 64, 176);
+}
+
+[data-animation="loadFade"] {
+  animation: fadeOut .7s linear 4.5s forwards;
+}
+
+[data-animation="loadSideIn"] {
+  animation: fadeSlideIn 0.3s linear 5.5s forwards;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -98,4 +171,12 @@ body {
         opacity:0;
         visibility:hidden;
     }
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity:1;
+    visibility:visible;
+    transform:translateX(0);
+  }
 }

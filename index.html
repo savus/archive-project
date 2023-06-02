@@ -18,7 +18,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <section class="loading-section">
+        <section class="loading-section" data-animation="loadFade">
             <div class="load-container absolute-center">
                 <div class="load-spinner">
                     <div class="text-container">Loading</div>
@@ -27,6 +27,19 @@
                     <div class="loadbar">
                         <div class="loadbar-progress"></div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-menu-section absolute-center">
+            <div class="main-menu" data-animation="loadSideIn">
+                <h2>Main Menu</h2>
+                <div class="menu-body">
+                    <ul>
+                        <li>Portfolio</li>
+                        <li>Games</li>
+                        <li>CSS Tricks</li>
+                        <li>Cheatsheets</li>
+                    </ul>
                 </div>
             </div>
         </section>
