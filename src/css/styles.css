@@ -85,6 +85,10 @@ body {
   opacity:0;
 }
 
+.menu-body {
+  overflow:hidden;
+}
+
 .main-menu h2 {
   text-align:center; 
   border-bottom:1px solid silver;
@@ -93,7 +97,7 @@ body {
 }
 
 .menu-body li {
-  padding:10px 0;
+  padding:10px 0 10px 100px;
   border-bottom:1px solid silver;
   width:200px;
   position:relative;
@@ -101,15 +105,16 @@ body {
   letter-spacing:2px;
   background-color:rgb(15, 52, 163);
   cursor:pointer;
-  transition: padding 0.5s, background-color 0.5s;
+  transition: padding 0.8s, background-color 0.5s, translateX 0.5s, margin 0.5s;
+  transform:translateX(-120%);
 }
 
-.menu-body li:hover {
-  padding-left:var(--size-20);
+.menu-body .menu-list li:hover {
   background-color:rgb(27, 64, 176);
+  margin-left:50px;
 }
 
-.menu-body li:last-child {
+.menu-body .menu-list li:last-child {
   border-bottom:none;
 }
 
@@ -122,6 +127,8 @@ body {
   position:absolute;
   top:0;
   transition:border-color .5s;
+  animation-fill-mode: none;
+
 }
 
 .menu-body li:hover::after {
@@ -129,11 +136,15 @@ body {
 }
 
 [data-animation="loadFade"] {
-  animation: fadeOut .7s linear 4.5s forwards;
+  animation: fadeOut .7s linear var(--main-menu-delay) forwards;
 }
 
 [data-animation="loadSideIn"] {
-  animation: fadeSlideIn 0.3s linear 5.5s forwards;
+  animation: fadeSlideIn 0.3s linear calc(var(--main-menu-delay) + 1s) forwards;
+}
+
+[data-animation="slideRightBack"] li {
+  animation:slideRightBack 1s linear calc(var(--main-menu-delay) + 2s) forwards;
 }
 
 @keyframes spin {
@@ -178,5 +189,15 @@ body {
     opacity:1;
     visibility:visible;
     transform:translateX(0);
+  }
+}
+
+@keyframes slideRightBack {
+  60% {
+    transform:translateX(0);
+  }
+  100% {
+    transform:translateX(0);
+    padding-left:0px;
   }
 }
