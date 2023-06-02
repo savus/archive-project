@@ -111,7 +111,11 @@ body {
 
 .menu-body .menu-list li:hover {
   background-color:rgb(27, 64, 176);
-  margin-left:50px;
+  padding-right:30px;
+}
+
+.menu-body .menu-list li:hover::after {
+  transform:translateX(30px);
 }
 
 .menu-body .menu-list li:last-child {
@@ -126,7 +130,7 @@ body {
   border-color: transparent transparent transparent rgb(15, 52, 163);
   position:absolute;
   top:0;
-  transition:border-color .5s;
+  transition:border-color .5s, transform 0.8s;
   animation-fill-mode: none;
 
 }
