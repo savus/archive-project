@@ -147,10 +147,6 @@ body {
   animation: fadeSlideIn 0.3s linear calc(var(--main-menu-delay) + 1s) forwards;
 }
 
-[data-animation="slideRightBack"] li {
-  animation:slideRightBack 1s linear calc(var(--main-menu-delay) + 2s) forwards;
-}
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
