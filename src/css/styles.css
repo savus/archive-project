@@ -2,20 +2,16 @@ body {
   background-color: #000;
 }
 
-.absolute-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .loading-section,
-.main-menu-section {
+.menu-screen-container {
   position:absolute;
   right:0;
   left:0;
   bottom:0;
   top:0;
 }
+
+/* LOADING SECTION */
 
 .load-container {
   color: white;
@@ -70,26 +66,29 @@ body {
   width: 50px;
 }
 
-.main-menu-section {
-  z-index:5;
+/* MENU SCREENS */
+
+.menu-screen-container {
+  position:relative;
 }
 
-.main-menu {
+.menu-screen {
   width:600px;
   border:1px inset silver;
   background-color:blue;
   color:white;
-  margin-top:var(--size-50);
-  position:relative;
+  top:var(--size-50);
+  position:absolute;
   transform:translateX(-50%);
   opacity:0;
+  visibility:hidden;
 }
 
 .menu-body {
   overflow:hidden;
 }
 
-.main-menu h2 {
+.menu-screen h2 {
   text-align:center; 
   border-bottom:1px solid silver;
   line-height:3;
@@ -139,12 +138,21 @@ body {
   border-color: transparent transparent transparent rgb(27, 64, 176);
 }
 
+/*LOADING SCREEN ANIMATIONS*/
 [data-animation="loadFade"] {
   animation: fadeOut .7s linear var(--main-menu-delay) forwards;
 }
 
-[data-animation="loadSideIn"] {
-  animation: fadeSlideIn 0.3s linear calc(var(--main-menu-delay) + 1s) forwards;
+[data-animation="slideFade"].active {
+  animation: fadeSlideIn 0.3s linear 1s forwards;
+}
+
+[data-animation="slideFade"].active li {
+  animation: slideRightBack 0.8s linear 2s forwards;
+}
+
+[data-animation="slideFade"].inactive {
+  animation: fadeSlideOut 0.3s linear forwards;
 }
 
 @keyframes spin {
@@ -184,11 +192,21 @@ body {
     }
 }
 
+/* MENU SCREEN ANIMATIONS*/
+
 @keyframes fadeSlideIn {
   to {
     opacity:1;
     visibility:visible;
     transform:translateX(0);
+  }
+}
+
+@keyframes fadeSlideOut {
+  to {
+    opacity:0;
+    visibility:hidden;
+    transform:translateX(-50%);
   }
 }
 

@@ -4,21 +4,23 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="src/css/base.css">
-        <link rel="stylesheet" href="src/css/styles.css">
-        <link rel="stylesheet" href="src/css/theme.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/theme.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <section class="loading-section" data-animation="loadFade">
+    <!-- <section class="loading-section" data-animation="loadFade">
             <div class="load-container absolute-center">
                 <div class="load-spinner">
                     <div class="text-container">Loading</div>
@@ -29,20 +31,32 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="main-menu" class="main-menu-section menu-screen absolute-center">
-            <div class="main-menu" data-animation="loadSideIn">
-                <h2>Main Menu</h2>
-                <div class="menu-body">
-                    <ul class="menu-list">
-                        <li data-link="#main-menu">Portfolio</li>
-                        <li>Games</li>
-                        <li>CSS Tricks</li>
-                        <li>Cheatsheets</li>
-                    </ul>
-                </div>
+        </section> -->
+    <section class="menu-screen-container absolute-center">
+        <div id="main-menu" class="menu-screen" data-animation="slideFade">
+            <h2>Main Menu</h2>
+            <div class="menu-body">
+                <ul class="menu-list">
+                    <li data-link="#portfolio-menu">Portfolio</li>
+                    <li>Games</li>
+                    <li>CSS Tricks</li>
+                    <li>Cheatsheets</li>
+                </ul>
             </div>
-        </section>
-        <script src="src/js/index.js" async defer></script>
-    </body>
+        </div>
+        <div id="portfolio-menu" class="menu-screen" data-animation="slideFade">
+            <h2>Portfolios</h2>
+            <div class="menu-body">
+                <ul class="menu-list">
+                    <li data-link="#main-menu">Portfolio</li>
+                    <li>Games</li>
+                    <li>CSS Tricks</li>
+                    <li>Cheatsheets</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="src/js/index.js" async defer></script>
+</body>
+
 </html>
