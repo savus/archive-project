@@ -132,7 +132,7 @@ body {
   top:0;
   transition:border-color .5s, transform 0.8s;
   animation-fill-mode: none;
-
+  
 }
 
 .menu-body li:hover::after {
