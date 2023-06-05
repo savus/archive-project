@@ -20,7 +20,7 @@ body {
 }
 
 .load-spinner {
-  border: 6px solid;
+  border: 3px solid;
   border-color: white transparent white transparent;
   border-radius: 50%;
   margin-bottom: var(--size-50);
@@ -74,7 +74,7 @@ body {
 
 .menu-screen {
   width:600px;
-  border:1px inset silver;
+  border:3px inset silver;
   background-color:blue;
   color:white;
   top:var(--size-50);
@@ -117,7 +117,7 @@ body {
 }
 
 .menu-screen.active .menu-body li {
-  animation: slideRightBack 0.8s linear 0.8s forwards;
+  animation: slideRightBack 0.7s linear 0.8s forwards;
 }
 
 .menu-body .menu-list li:hover {
