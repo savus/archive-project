@@ -82,6 +82,14 @@ body {
   transform:translateX(-50%);
   opacity:0;
   visibility:hidden;
+  transition: all linear 0.3s;
+  transition-delay: 1s;
+}
+
+.menu-screen.active {
+  opacity:1;
+  visibility:visible;
+  transform:translateX(0);
 }
 
 .menu-body {
@@ -106,6 +114,10 @@ body {
   cursor:pointer;
   transition: padding 0.8s, background-color 0.5s, translateX 0.5s, margin 0.5s;
   transform:translateX(-120%);
+}
+
+.menu-screen.active .menu-body li {
+  animation: slideRightBack 0.8s linear 2s forwards;
 }
 
 .menu-body .menu-list li:hover {
@@ -141,18 +153,6 @@ body {
 /*LOADING SCREEN ANIMATIONS*/
 [data-animation="loadFade"] {
   animation: fadeOut .7s linear var(--main-menu-delay) forwards;
-}
-
-[data-animation="slideFade"].active {
-  animation: fadeSlideIn 0.3s linear 1s forwards;
-}
-
-[data-animation="slideFade"].active li {
-  animation: slideRightBack 0.8s linear 2s forwards;
-}
-
-[data-animation="slideFade"].inactive {
-  animation: fadeSlideOut 0.3s linear forwards;
 }
 
 @keyframes spin {
@@ -194,14 +194,6 @@ body {
 
 /* MENU SCREEN ANIMATIONS*/
 
-@keyframes fadeSlideIn {
-  to {
-    opacity:1;
-    visibility:visible;
-    transform:translateX(0);
-  }
-}
-
 @keyframes fadeSlideOut {
   to {
     opacity:0;
@@ -217,5 +209,14 @@ body {
   100% {
     transform:translateX(0);
     padding-left:0px;
+  }
+}
+
+@keyframes reverseSlideBack {
+  60% {
+    padding-left:100px;
+  }
+  100% {
+    transform:translateX(-120%);
   }
 }

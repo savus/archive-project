@@ -1,10 +1,11 @@
 const slideRightBack = 'slideRightBack';
 const menuItem = '.menu-list li';
 const active = 'active';
-const inactive = 'inactive';
 const menuScreen = '.menu-screen';
 const mainMenuId = '#main-menu';
 const mainMenu = document.querySelector(mainMenuId);
+const portfolioId = '#portfolio-menu';
+const portfolioMenu = document.querySelector(portfolioId);
 const menuList = document.querySelectorAll(menuItem);
 let menuDelay = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('--main-menu-delay'));
 
@@ -12,7 +13,6 @@ const setActive = (elm, selector) => {
    const activeElement = document.querySelector(`${selector}.${active}`);
    if (activeElement !== null) {
       activeElement.classList.remove(active);
-      activeElement.classList.add(inactive);
    }
    elm.classList.add(active);
 };
@@ -24,7 +24,6 @@ menuList.forEach((item, itemIndex) => {
       setActive(linkedElement, menuScreen);
    });
 });
-
 
 setTimeout(function () {
    setActive(mainMenu, menuScreen);
