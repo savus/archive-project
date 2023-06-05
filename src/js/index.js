@@ -8,6 +8,7 @@ const portfolioId = '#portfolio-menu';
 const portfolioMenu = document.querySelector(portfolioId);
 const menuList = document.querySelectorAll(menuItem);
 let menuDelay = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('--main-menu-delay'));
+let listItemDelay = 1;
 
 const setActive = (elm, selector) => {
    const activeElement = document.querySelector(`${selector}.${active}`);

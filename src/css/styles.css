@@ -82,8 +82,8 @@ body {
   transform:translateX(-50%);
   opacity:0;
   visibility:hidden;
-  transition: all linear 0.3s;
-  transition-delay: 1s;
+  transition: all linear 0.5s;
+  transition-delay: 0.1s;
 }
 
 .menu-screen.active {
@@ -117,7 +117,7 @@ body {
 }
 
 .menu-screen.active .menu-body li {
-  animation: slideRightBack 0.8s linear 2s forwards;
+  animation: slideRightBack 0.8s linear 0.8s forwards;
 }
 
 .menu-body .menu-list li:hover {
