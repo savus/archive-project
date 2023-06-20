@@ -4,28 +4,41 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Archive Project</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./src/css/base.css">
-        <link rel="stylesheet" href="./src/css/theme.css">
-        <link rel="stylesheet" href="./src/css/styles.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div id="loading-screen-container" class="screen-container absolute-center" data-animation="loadFadeOut">
-            <div id="loading-screen" class="absolute-center" data-animation="loadSpin">
-                <div data-animation="loadSpinReverse">Loading</div>
-            </div>
-            <div id="loading-bar">
-                <div id="loading-bar-inner" data-animation="loadBarRight"></div>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Archive Project</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <link rel="stylesheet" href="./src/css/theme.css" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div
+      id="loading-screen-container"
+      class="screen-container absolute-center"
+      data-animation="loadFadeOut"
+    >
+      <div
+        id="loading-screen"
+        class="absolute-center"
+        data-animation="loadSpin"
+      >
+        <div data-animation="loadSpinReverse">
+          <div data-animation="loadFadeInOut">Loading</div>
         </div>
-        <script src="./src/js/index.js" async defer></script>
-    </body>
+      </div>
+      <div id="loading-bar">
+        <div id="loading-bar-inner" data-animation="loadBarRight"></div>
+      </div>
+    </div>
+    <script src="./src/js/index.js" async defer></script>
+  </body>
 </html>
