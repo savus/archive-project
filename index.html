@@ -4,92 +4,28 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/css/base.css">
-    <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="stylesheet" href="src/css/theme.css">
-</head>
-
-<body>
-    <!--[if lt IE 7]>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Archive Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./src/css/base.css">
+        <link rel="stylesheet" href="./src/css/theme.css">
+        <link rel="stylesheet" href="./src/css/styles.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <section class="loading-section" data-animation="loadFade">
-            <div class="load-container absolute-center">
-                <div class="load-spinner">
-                    <div class="text-container">Loading</div>
-                </div>
-                <div class="loadbar-container">
-                    <div class="loadbar">
-                        <div class="loadbar-progress"></div>
-                    </div>
-                </div>
+        <div id="loading-screen-container" class="screen-container">
+            <div id="loading-screen">
+                <div>Loading</div>
             </div>
-        </section>
-    <section class="menu-screen-container absolute-center">
-        <div id="main-menu" class="menu-screen" data-animation="slideFade">
-            <h2>Main Menu</h2>
-            <div class="menu-body">
-                <ul class="menu-list">
-                    <li data-link="#portfolio-menu">Portfolio</li>
-                    <li data-link="#games-menu">Games</li>
-                    <li data-link="#css-tricks-menu">CSS Tricks</li>
-                    <li data-link="#cheatsheets-menu">Cheatsheets</li>
-                </ul>
+            <div id="loading-bar">
+                <div id="loading-bar-inner"></div>
             </div>
         </div>
-        <div id="portfolio-menu" class="menu-screen" data-animation="slideFade">
-            <h2>Portfolios</h2>
-            <div class="menu-body">
-                <ul class="menu-list">
-                    <li data-link="#main-menu">Main Menu</li>
-                    <li>Interactive Website</li>
-                    <li>Pokemon API Project</li>
-                    <li>Responsive Website</li>
-                </ul>
-            </div>
-        </div>
-        <div id="games-menu" class="menu-screen" data-animation="slideFade">
-            <h2>Games</h2>
-            <div class="menu-body">
-                <ul class="menu-list">
-                    <li data-link="#main-menu">Main Menu</li>
-                    <li>Battleship Project</li>
-                    <li>Other</li>
-                    <li>Other</li>
-                </ul>
-            </div>
-        </div>
-        <div id="css-tricks-menu" class="menu-screen" data-animation="slideFade">
-            <h2>Css Tricks</h2>
-            <div class="menu-body">
-                <ul class="menu-list">
-                    <li data-link="#main-menu">Main Menu</li>
-                    <li>Battleship Project</li>
-                    <li>Other</li>
-                    <li>Other</li>
-                </ul>
-            </div>
-        </div>
-        <div id="cheatsheets-menu" class="menu-screen" data-animation="slideFade">
-            <h2>Cheatsheets</h2>
-            <div class="menu-body">
-                <ul class="menu-list">
-                    <li data-link="#main-menu">Main Menu</li>
-                    <li>Components</li>
-                    <li>Github Cheatsheet</li>
-                    <li>Codewars Techniques</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <script src="src/js/index.js" async defer></script>
-</body>
-
+        <script src="./src/js/index.js" async defer></script>
+    </body>
 </html>
