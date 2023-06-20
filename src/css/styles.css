@@ -1,0 +1,77 @@
+body {
+  background-color:#000;
+}
+
+#loading-screen-container {
+  color:#fff;
+  font-size:2em;
+  flex-direction:column;
+  margin-top:20%;
+}
+
+#loading-screen {
+  border:3px solid #fff;
+  height:12rem;
+  width:12rem;
+  border-radius:50%;
+  letter-spacing: 1.6px;
+  border-right-color:transparent;
+  border-left-color:transparent;
+
+}
+
+#loading-bar {
+  border:1px solid #fff;
+  width:200px;
+  height:6px;
+  margin-top:var(--size-34);
+  border-radius:var(--size-16);
+  overflow:hidden;
+}
+
+#loading-bar-inner {
+  height:100%;
+  background-color:#fff;
+  width:0%;
+}
+
+[data-animation="loadFadeOut"] {
+  animation:loadFadeOut 0.8s linear 3s forwards 
+}
+
+[data-animation="loadSpin"] {
+  animation: loadSpin 2.2s ease infinite;
+}
+
+[data-animation="loadSpinReverse"] {
+  animation:loadSpinReverse 2.2s ease infinite;
+}
+
+[data-animation="loadBarRight"] {
+  animation:loadBarRight 2.8s ease forwards;
+}
+
+@keyframes loadFadeOut {
+  to {
+    visibility:hidden;
+    opacity:0;
+  }
+}
+
+@keyframes loadSpin {
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes loadSpinReverse {
+  to {
+    transform:rotate(-360deg);
+  }
+}
+
+@keyFrames loadBarRight {
+  to {
+    width:100%;
+  }
+}
