@@ -1,19 +1,20 @@
 body {
   background-color: #000;
 }
- 
+
 /* Loading Screen Section */
 #loading-screen-container {
   color: #fff;
   font-size: 2em;
   flex-direction: column;
   margin-top: 20%;
+  z-index:1;
 }
 
 #loading-screen {
   border: 3px solid #fff;
-  height: 12rem;
-  width: 12rem;
+  height:200px;
+  width: 200px;
   border-radius: 50%;
   letter-spacing: 1.6px;
   border-right-color: transparent;
@@ -35,8 +36,30 @@ body {
   width: 0%;
 }
 
+.screen-container {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.swap-screen-container {
+  visibility:hidden;
+  opacity:0;
+}
+
+.options-menu {
+  width:500px;
+  color:white;
+  border:1px solid rgba(255,255,255,0.6);
+  box-shadow:1px 0px 24px rgba(255,255,255,0.6);
+  transform:translateX(-100%);
+}
+
+
 [data-animation="loadFadeOut"] {
-  animation: loadFadeOut 0.8s linear 3.2s forwards;
+  animation: loadFadeOut 0.8s linear 3.1s forwards;
 }
 
 [data-animation="loadSpin"] {
@@ -53,6 +76,14 @@ body {
 
 [data-animation="loadFadeInOut"] {
   animation: loadFadeInOut 1.6s ease-in-out infinite;
+}
+
+[data-animation="swapFadeIn"] {
+  animation:swapFadeIn 0.8s linear 3.8s forwards;
+}
+
+[data-animation="swapFadeIn"] [data-animation="swapFadeRight"] {
+  animation:swapFadeRight 0.8s linear 4s forwards;
 }
 
 @keyframes loadFadeOut {
@@ -89,5 +120,18 @@ body {
 @keyframes loadBarRight {
   to {
     width: 100%;
+  }
+}
+
+@keyframes swapFadeIn {
+  to {
+    visibility:visible;
+    opacity:1;
+  }
+}
+
+@keyframes swapFadeRight {
+  to {
+    transform:translateX(0);
   }
 }
