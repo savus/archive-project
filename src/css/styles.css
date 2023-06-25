@@ -7,14 +7,16 @@ body {
   color: #fff;
   font-size: 2em;
   flex-direction: column;
-  margin-top: 20%;
+  justify-content:center;
+  align-items:center;
   z-index:1;
+  animation-delay: var(--loading-screen-delay);
 }
 
 #loading-screen {
   border: 3px solid #fff;
-  height:200px;
-  width: 200px;
+  min-height:200px;
+  min-width: 200px;
   border-radius: 50%;
   letter-spacing: 1.6px;
   border-right-color: transparent;
@@ -45,8 +47,8 @@ body {
 }
 
 .swap-screen-container {
-  visibility:hidden;
-  opacity:0;
+  visibility:visible;
+  opacity:1;
 }
 
 .options-menu {
@@ -54,12 +56,18 @@ body {
   color:white;
   border:1px solid rgba(255,255,255,0.6);
   box-shadow:1px 0px 24px rgba(255,255,255,0.6);
-  transform:translateX(-100%);
+  transform:translateX(0);
 }
 
+.options-menu-header {
+  font-size:var(--size-18);
+  text-align:center;
+  border-bottom:1px solid #fff;
+  box-shadow:1px 0px 8px rgba(255,255,255,0.6);
+}
 
 [data-animation="loadFadeOut"] {
-  animation: loadFadeOut 0.8s linear 3.1s forwards;
+  animation: loadFadeOut 0.8s linear forwards;
 }
 
 [data-animation="loadSpin"] {
@@ -79,11 +87,11 @@ body {
 }
 
 [data-animation="swapFadeIn"] {
-  animation:swapFadeIn 0.8s linear 3.8s forwards;
+  /* animation:swapFadeIn 0.8s linear calc(var(--loading-screen-delay) + 0.4s) forwards; */
 }
 
 [data-animation="swapFadeIn"] [data-animation="swapFadeRight"] {
-  animation:swapFadeRight 0.8s linear 4s forwards;
+  /* animation:swapFadeRight 0.8s linear calc(var(--loading-screen-delay) + 0.6s) forwards; */
 }
 
 @keyframes loadFadeOut {
