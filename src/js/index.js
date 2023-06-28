@@ -35,6 +35,6 @@ optionsMenuLists.forEach((menuList) => {
    Array.from(menuList.children).forEach((listItem, index) => {
       setTimeout(() => {
          listItem.classList.add(active);
-      }, index * 300);
+      }, index * 200);
    })
 })
