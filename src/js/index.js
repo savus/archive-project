@@ -1,4 +1,5 @@
 const mainMenuId = 'main-menu';
+const optionsMenuList = '.options-menu-list';
 
 const root = document.documentElement;
 
@@ -11,7 +12,6 @@ const loadingScreenDelay = parseFloat(
 const active = 'active';
 const menuDelay = 500;
 
-const mainMenu = document.getElementById(mainMenuId);
 
 const setActive = (elm, selector, isDelayed = false, timingDelay) => {
    const activeElement = document.querySelector(`${selector}.active`);
@@ -27,3 +27,14 @@ const setActive = (elm, selector, isDelayed = false, timingDelay) => {
       elm.classList.add(active);
    }
 }
+
+const mainMenu = document.getElementById(mainMenuId);
+const optionsMenuLists = document.querySelectorAll(optionsMenuList);
+
+optionsMenuLists.forEach((menuList) => {
+   Array.from(menuList.children).forEach((listItem, index) => {
+      setTimeout(() => {
+         listItem.classList.add(active);
+      }, index * 300);
+   })
+})
