@@ -1,5 +1,8 @@
 const mainMenuId = 'main-menu';
+const gameMenuId = 'games-menu';
+
 const optionsMenuList = '.options-menu-list';
+
 
 const root = document.documentElement;
 
@@ -13,7 +16,7 @@ const active = 'active';
 const menuDelay = 500;
 
 
-const setActive = (elm, selector, isDelayed = false, timingDelay) => {
+const setActive = (elm, selector, isDelayed = false, timingDelay = 300) => {
    const activeElement = document.querySelector(`${selector}.active`);
    if (activeElement !== null) {
       activeElement.classList.remove(active);
@@ -29,6 +32,8 @@ const setActive = (elm, selector, isDelayed = false, timingDelay) => {
 }
 
 const mainMenu = document.getElementById(mainMenuId);
+const gameMenu = document.getElementById(gameMenuId);
+
 const optionsMenuLists = document.querySelectorAll(optionsMenuList);
 
 optionsMenuLists.forEach((menuList) => {
