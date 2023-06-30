@@ -59,7 +59,6 @@ body {
 
 .swap-screen-container .options-menu {
   width:500px;
-  color:white;
   border:1px solid rgba(255,255,255,0.6);
   box-shadow:1px 0px 24px rgba(255,255,255,0.6);
   border-radius:10px;
@@ -77,6 +76,11 @@ body {
   transform:translate(0);
   visibility: visible;
   opacity:1;
+}
+
+.swap-screen-container .options-menu,
+.swap-screen-container .back-menu {
+  color:white;
 }
 
 .options-menu-header {

@@ -4,36 +4,21 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Archive Project</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script
-      src="https://kit.fontawesome.com/062335cba3.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?
-        family=Open+Sans:ital,wght@
-        0,300;
-        0,400;
-        0,500;
-        0,600;
-        0,700;1,300&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./src/css/base.css" />
     <link rel="stylesheet" href="./src/css/theme.css" />
     <link rel="stylesheet" href="./src/css/styles.css" />
-    <link rel="stylesheet" href="./src/SaaS-Project-Css/default_styles.css">
-    <link rel="stylesheet" href="./src/SaaS-Project-Css/custom_styles.css">
-    <link rel="stylesheet" href="./src/SaaS-Project-Css/responsive_styles.css">
-  </head>
-  <body>
+
+
+</head>
+
+<body>
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -42,7 +27,7 @@
     <![endif]-->
 
     <!--MENU SCREENS SECTION-->
-    <section>
+    <!-- <section>
       <div
         id="loading-screen-container"
         class="screen-container absolute-center"
@@ -134,661 +119,59 @@
         </div>
       </div>
 
+      
       <div
-        id="portfolio-menu"
-        class="screen-container swap-screen-container absolute-center"
-        data-animation="swapFadeIn"
+      id="cheatsheets-menu"
+      class="screen-container swap-screen-container absolute-center"
+      data-animation="swapFadeIn"
       >
-        <div class="options-menu" data-animation="swapFadeRight">
-          <div class="options-menu-header">
-            <div>Portfolio Menu</div>
-          </div>
-          <div class="options-menu-body">
-            <ul class="options-menu-list">
-              <li class="options-menu-link" data-link="main-menu">Main Menu</li>
-              <li
-                class="options-menu-link"
-                data-link="devslopes-project-SaaS-website"
-              >
-                SaaS Website
-              </li>
-              <li class="options-menu-link" data-link="">Project 2</li>
-              <li class="options-menu-link" data-link="">Project 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="cheatsheets-menu"
-        class="screen-container swap-screen-container absolute-center"
-        data-animation="swapFadeIn"
-      >
-        <div class="options-menu" data-animation="swapFadeRight">
+      <div class="options-menu" data-animation="swapFadeRight">
           <div class="options-menu-header">
             <div>Cheatsheets Menu</div>
-          </div>
-          <div class="options-menu-body">
+        </div>
+        <div class="options-menu-body">
             <ul class="options-menu-list">
               <li class="options-menu-link" data-link="main-menu">Main Menu</li>
               <li class="options-menu-link" data-link="git-hub">Git Hub</li>
               <li class="options-menu-link" data-link="css">CSS</li>
               <li class="options-menu-link" data-link="bash">Bash</li>
             </ul>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</div>
+</section> -->
+    <div id="portfolio-menu" class="screen-container swap-screen-container absolute-center active" data-animation="swapFadeIn">
+        <div class="options-menu" data-animation="swapFadeRight">
+            <div class="options-menu-header">
+                <div>Portfolio Menu</div>
+            </div>
+            <div class="options-menu-body">
+                <ul class="options-menu-list">
+                    <li class="options-menu-link" data-link="main-menu">Main Menu</li>
+                    <li class="options-menu-link">
+                        <a href="SaaS-Project.html">SaaS Website</a>
+                    </li>
+                    <li class="options-menu-link" data-link="">Project 2</li>
+                    <li class="options-menu-link" data-link="">Project 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <!-- PORTFOLIO SECTION -->
     <section id="portfolio-section">
-      <div
-        id="devslopes-project-SaaS-website"
-        class="screen-container swap-screen-container"
-      >
-        <ul class="options-menu-list">
-          <li class="options-menu-link" data-link="main-menu">
-            Back to Main Menu
-          </li>
-          <li class="options-menu-link" data-link="portfolio-menu">
-            Back to Portfolios
-          </li>
-        </ul>
-      </div>
-      <!-- <div class="top-section-bg">
-        <nav class="navbar" id="topNav">
-            <div class="container flex-and-align">
-                <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown">
-                    <span class="trigram">&#9776;</span>
-                    <span class="x-icon"><i class="fa-solid fa-x"></i></span>
-                </button>
-                <div class="brand-logo push-right">
-                    <img src="./saas-project-assets/project_logo/logo.svg" alt="Brand Logo">
-                </div>
-                <ul class="nav-links flex-and-align flex-row">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="highlighted">Features</a>
-                    </li>
-                    <li>
-                        <a href="#">Learn</a>
-                    </li>
-                    <li>
-                        <a href="#">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#">Hire Us</a>
-                    </li>
-                    <li class="buy-now-btn">
-                        <a href="#" class="btn btn-primary bold">Buy Now</a>
-                    </li>
-                </ul>
-        </nav>
-        <header>
-            <div class="container flex-and-align flex-row">
-                <div class="title-and-content mobile-centered tablet-resize-text">
-                    <h2>Empowering teams with the freedom</h2>
-                    <p>Own the unlimited power of the web development</p>
-                    <a href="#" class="btn btn-primary">
-                        <i class="fa-solid fa-play play-arrow-base"></i>
-                        Play Video
-                    </a>
-                    <a href="#" class="highlighted bold">Learn More</a>
-                </div>
-                <div class="header-icon-container mobile-resize-icon">
-                    <div class="header-icon sm google-icon">
-                        <img src="./saas-project-assets/logo_icons/google.png" alt="Google Icon">
-                    </div>
-                    <div class="header-icon md atlassian-icon">
-                        <img src="./saas-project-assets/logo_icons/atlassian.png" alt="Atlassian Icon">
-                    </div>
-                    <div class="header-icon md asana-icon">
-                        <img src="./saas-project-assets/logo_icons/asana.png" alt="Asana Icon">
-                    </div>
-                    <div class="header-icon md paypal-icon">
-                        <img src="./saas-project-assets/logo_icons/paypal.jpg" alt="Paypal Icon">
-                    </div>
-                    <div class="header-icon md weave-icon">
-                        <img src="./saas-project-assets/logo_icons/weave.png" alt="Weave Icon">
-                    </div>
-                    <div class="header-icon sm google-a-icon">
-                        <img src="./saas-project-assets/logo_icons/google-A.png" alt="Google-A Icon">
-                    </div>
-                    <div class="header-icon md calendar-icon">
-                        <img src="./saas-project-assets/logo_icons/calendar.png" alt="Calendar Icon">
-                    </div>
-                </div>
-            </div>
-        </header>
-      </div> -->
-      <!-- <section class="benefits-section">
-          <div class="title-and-content section-intro padding-beneath tablet-resize-text">
-              <h2>Key Benefits</h2>
-              <p>Design faster with a growing array of beautiful templates</p>
-          </div>
-          <div class="container benefit-card-grid padding-beneath mobile-resize-card">
-              <a href="https://www.google.com/" class="benefit-card">
-                  <div class="benefit-icon">
-                      <img src="./saas-project-assets/icons/responsive.svg" alt="Responsive Icon">
-                  </div>
-                  <div class="title-and-content">
-                      <h2>Responsive</h2>
-                      <p>
-                          It is a long established fact that a reader
-                          will be distracted by the readable content
-                          of a page when looking at its layout.
-                      </p>
-                  </div>
-                  <div class="highlighted bold">Learn More</div>
-              </a>
-              <a href="https://www.wikipedia.com/" class="benefit-card">
-                  <div class="benefit-icon">
-                      <img src="./saas-project-assets/icons/customizable.svg" alt="Customizable Icon">
-                  </div>
-                  <div class="title-and-content">
-                      <h2>Customizable</h2>
-                      <p>
-                          It is a long established fact that a reader
-                          will be distracted by the readable content
-                          of a page when looking at its layout.
-                      </p>
-                  </div>
-                  <div class="highlighted bold">Learn More</div>
-              </a>
-              <a href="https://www.youtube.com/" class="benefit-card">
-                  <div class="benefit-icon">
-                      <img src="./saas-project-assets/icons/premium.svg" alt="Premium Icon">
-                  </div>
-                  <div class="title-and-content">
-                      <div class="sketch-container flex-and-align">
-                          <h2>Premium</h2>
-                          <div class="btn btn-sketch">Sketch</div>
-                      </div>
-                      <p>
-                          It is a long established fact that a reader
-                          will be distracted by the readable content
-                          of a page when looking at its layout.
-                      </p>
-                  </div>
-                  <div class="highlighted bold">Learn More</div>
-              </a>
-              <a href="https://www.github.com/" class="benefit-card">
-                  <div class="benefit-icon">
-                      <img src="./saas-project-assets/icons/documentation.svg" alt="Documentation Icon">
-                  </div>
-                  <div class="title-and-content">
-                      <h2>Documentation</h2>
-                      <p>
-                          It is a long established fact that a reader
-                          will be distracted by the readable content
-                          of a page when looking at its layout.
-                      </p>
-                  </div>
-                  <div class="highlighted bold">Learn More</div>
-              </a>
-          </div>
-      </section> -->
-      <!-- <section class="banner-section margin-beneath">
-          <div class="container">
-              <div class="banner-section-columns flex-and-align flex-row">
-                  <div class="column-left tablet-resize-text mobile-centered">
-                      <h2>Front makes you look at things from a different prospectives</h2>
-                      <a href="#" class="btn btn-primary">
-                          <i class="fa-solid fa-play play-arrow-base"></i>
-                          Play Video
-                      </a>
-                  </div>
-                  <div class="column-right">
-                      <img src="./saas-project-assets/banners/banner_one.jpg" alt="Presentation Banner">
-                  </div>
-              </div>
-          </div>
-      </section> -->
-      <!-- <section class="why-front-section">
-          <div class="title-and-content section-intro padding-beneath tablet-resize-text">
-              <h2>Why Front?</h2>
-              <p>
-                  Front is an incredibly beautiful, fully responsive, and mobile-first projects on
-                  the web - it is the starting point for creative sites
-              </p>
-          </div>
-          <div class="component-nodes">
-              <div class="container flex-and-align">
-                  <div class="node-container">
-                      <div class="node-and-line">
-                          <span class="node-line hidden"></span>
-                          <div class="node-circle"></div>
-                          <span class="node-line"></span>
-                      </div>
-                      <div class="node-name">Basic Elements</div>
-                  </div>
-                  <div class="node-container">
-                      <div class="node-and-line">
-                          <span class="node-line"></span>
-                          <div class="node-circle"></div>
-                          <span class="node-line"></span>
-                      </div>
-                      <div class="node-name">Components</div>
-                  </div>
-                  <div class="node-container">
-                      <div class="node-and-line">
-                          <span class="node-line"></span>
-                          <div class="node-circle"></div>
-                          <span class="node-line"></span>
-                      </div>
-                      <div class="node-name">Combined Components</div>
-                  </div>
-                  <div class="node-container">
-                      <div class="node-and-line">
-                          <span class="node-line"></span>
-                          <div class="node-circle"></div>
-                          <span class="node-line hidden"></span>
-                      </div>
-                      <div class="node-name">Page layouts</div>
-                  </div>
-              </div>
-          </div>
-      </section> -->
-      <!-- <section class="hubspot-section padding-beneath">
-          <div class="container">
-              <div class="hubspot-video-container padding-beneath">
-                  <img src="./saas-project-assets/banners/banner_two.jpg" alt="Second Banner">
-                  <a href="#" class="btn btn-large hubspot-play">
-                      <i class="fa-solid fa-play"></i>
-                  </a>
-              </div>
-              <div class="hubspot-director-container flex-and-align flex-row">
-                  <div class="director-image-column">
-                      <img src="./saas-project-assets/people/woman_three.jpg" class="director-image" alt="Christina Kray">
-                      <img src="./saas-project-assets/abstract/dots.svg" class="dots-graphic" alt="Dots Background">
-                  </div>
-                  <div class="director-quote-column mobile-centered tablet-resize-text">
-                      <img src="./saas-project-assets/company_logos/hubspot.svg" class="hubspot-logo" alt="Hubspot Logo"> 
-                      <h2>
-                          The template is really nice and offers quite a large
-                          set of options. It's beautiful and the coding is done quickly and seamlessly.
-                          Thank you!
-                      </h2>
-                      <div class="title-and-content director-name">
-                          <h2>Christina Kray</h2>
-                          <p>Executive Director</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section> -->
-      <!-- <section class="trusted-company-section">
-          <div class="section-intro tablet-resize-text">
-              <h2>
-                  TRUSTED BY WORLD'S BEST
-              </h2>
-          </div>
-          <div class="container company-logos-container flex-and-align">
-              <img src="./saas-project-assets/company_logos/weebly.svg" alt="Weebly Logo">
-              <img src="./saas-project-assets/company_logos/uber.svg" alt="Uber Logo">
-              <img src="./saas-project-assets/company_logos/slack.svg" alt="Slack Logo">
-              <img src="./saas-project-assets/company_logos/airbnb.svg" alt="Airbnb Logo">
-              <img src="./saas-project-assets/company_logos/spotify.svg" alt="Spotify Logo">
-          </div>
-      </section> -->
-      <!-- <section class="pricing-section">
-          <div class="title-and-content section-intro padding-beneath tablet-resize-text">
-              <h2>Pricing</h2>
-              <p>No additional costs. Pay for what you use.</p>
-          </div>
-          <div class="container pricing-card-grid mobile-resize-card">
-              <div class="benefit-card monthly-price">
-                  <div class="title-and-content">
-                      <div class="monthly-price-header">
-                          <span>59</span>
-                          <span> / mo</span>
-                      </div>
-                      <hr>
-                      <p class="guarantee-quote">
-                          Start your Front business now. 100%
-                          guaranteed money back. No questions
-                          asked.
-                      </p>
-                      <a href="#" class="btn btn-primary">
-                          <i class="fa-solid fa-play play-arrow-base"></i>
-                          Play Video
-                      </a>
-                      <p>No credit card required.</p>
-                  </div>
-              </div>
-              <div class="benefit-card components-card">
-                  <div class="benefit-icon">
-                      <img src="./saas-project-assets/icons/components.svg" alt="Jigsaw Icon">
-                  </div>
-                  <div class="title-and-content">
-                      <h2>Hundreds of components</h2>
-                      <p>
-                          Achieve maximum productivity with minimum effort with Front and create robust 
-                          Limitless products.
-                      </p>
-                  </div>
-              </div>
-              <div class="benefit-card images-card">
-                  <div class="benefit-icon">
-                      <img src="./saas-project-assets/icons/images.svg" alt="Diamond Icon">
-                  </div>
-                  <div class="title-and-content">
-                      <h2>Images included</h2>
-                      <p>
-                          Images included We made custom license for all our premium images
-                          in the front.
-                      </p>
-                  </div>
-              </div>
-              <div class="benefit-card cancel-card">
-                  <div class="benefit-icon">
-                      <img src="./saas-project-assets/icons/cancel.svg" alt="Price tag Icon">
-                  </div>
-                  <div class="title-and-content">
-                      <div class="sketch-container flex-and-align">
-                          <h2>Cancel anytime</h2>
-                          <a href="#" class="btn btn-sketch">Sketch</a>
-                      </div>
-                      <p>
-                          If its not for you, just cancel, no hidden costs or fees.
-                      </p>
-                  </div>
-              </div>
-              <div class="benefit-card money-back-card">
-                  <div class="benefit-icon">
-                      <img src="./saas-project-assets/icons/moneyback.svg" alt="Money bag icon">
-                  </div>
-                  <div class="title-and-content">
-                      <h2>Money Back</h2>
-                      <p>
-                        100% guaranteed money back. no questions asked.
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </section> -->
-      <!-- <section class="form-section">
-          <div class="form-container flex-and-align flex-row tablet-resize-text">
-              <div class="hire-us-column tablet-flex">
-                  <div class="hire-us-left">
-                      <div class="title-and-content hire-us">
-                          <h2>Hire Us</h2>
-                          <p>
-                              Whatever your goal -
-                              we will get you there.
-                          </p>
-                      </div>
-                      <hr>
-                      <p class="hire-us-quote">
-                          <q>
-                              I love front! I love the ease of use, I love the  
-                              fact that I have total creative freedom...
-                          </q>
-                      </p>
-                  </div>
-                  <div class="hire-us-right">
-                      <div class="title-and-content business-credit tablet-resize-text">
-                          <h2>Charlotte Moore</h2>
-                          <p>Head of Commerials, Slack</p>
-                      </div>
-                      <div class="staff-profiles flex-and-align">
-                          <img src="./saas-project-assets/people/woman_two.jpg" alt="Female Profile">
-                          <img src="./saas-project-assets/people/woman_one.jpg" alt="Female Profile">
-                          <img class="staff-profile-lg" src="./saas-project-assets/people/man_one.jpg" alt="">
-                      </div>
-                  </div>
-              </div>
-              <div class="form-column">
-                  <form action="/action_page.php" target="_blank" method="POST">
-                      <h3>Fill out the form and we'll be in touch as soon as possible</h3>
-                      
-                      <div class="input-field-grid">
-                          <input type="text" class="col-1" id="first-name-1" name="first-name-1" placeholder="First name">
-                          <input type="text" class="col-2" id="last-name-1" name="last-name-1" placeholder="Last name">
-                  
-                          <input type="text" class="col-1" id="first-name-2" name="first-name-2" placeholder="First name">
-                          <input type="text" class="col-2" id="last-name-2" name="last-name-2" placeholder="Last name">
-
-                          <select name="budget" id="budget" class="budget">
-                              <option value="">Budget</option>
-                          </select>
-                          <select name="budget" id="budget" class="budget">
-                              <option value="">Country</option>
-                          </select>
-                          <textarea name="more-info" id="more-info" cols="30" rows="10">Tell us more about your project, needs, and timeline, please...</textarea>
-                      </div>
-
-                      <div class="flex-and-align">
-                          <input type="checkbox" name="receive-email" id="receive-email" class="receive-email">
-                          <label for="receive-email">
-                              Yes, I'd like to receive occasional marketing emails from Front. 
-                              I have the right to opt out at any time.
-                          </label>
-                      </div>
-                      <div class="flex-and-align policy-container">
-                          <a href="#" class="privacy-policy">View privacy policy</a>
-                          <a href="#" class="privacy-policy highlighted">View privacy policy</a>
-                      </div>
-
-                      <input type="submit" value="Get Started" class="btn btn-primary">
-                  </form>
-              </div>
-          </div>
-      </section> -->
-      <!-- <footer>
-          <div class="footer-top">
-              <div class="footer-column-grid">
-
-                  <div class="footer-col tablet-col-1 col-1">
-                      <div class="footer-title">
-                          <div class="brand-logo">
-                              <h2>
-                                  <img src="./saas-project-assets/project_logo/logo.svg" alt="Brand Logo">
-                              </h2>
-                          </div>
-                      </div>
-                      <ul class="footer-col-list">
-                          <li>
-                              <a href="#">
-                                  <i class="fa-solid fa-location-arrow"></i>
-                                  153 Williamson Plaza, Maggieberg
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <i class="fa-solid fa-phone"></i>
-                                  <span class="highlighted">+1 (062) 109 9222</span>
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
-
-                  <div class="footer-col">
-                      <div class="footer-title">
-                          <h2>
-                              Company
-                          </h2>
-                      </div>
-                      <ul class="footer-col-list">
-                          <li>
-                              <a href="#">
-                                  About
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#">Career</a>
-                              <a href="#" class="btn btn-primary btn-small">We're hiring</a>
-                          </li>
-                          <li>
-                              <a href="#">Blog</a>
-                          </li>
-                          <li>
-                              <a href="#">Customers</a>
-                          </li>
-                          <li>
-                              <a href="#">Hire us</a>
-                          </li>
-                      </ul>
-                  </div>
-
-                  <div class="footer-col">
-                      <div class="footer-title">
-                          <h2>
-                              Features
-                          </h2>
-                      </div>
-                      <ul class="footer-col-list">
-                          <li>
-                              <a href="#">Press</a>
-                          </li>
-                          <li>
-                              <a href="#" class="highlighted">Release Notes</a>
-                          </li>
-                          <li>
-                              <a href="#">Integrations</a>
-                          </li>
-                          <li>
-                              <a href="#">Pricong</a>
-                          </li>
-                      </ul>
-                  </div>
-
-                  <div class="footer-col">
-                      <div class="footer-title">
-                          <h2>Documentation</h2>
-                      </div>
-                      <ul class="footer-col-list">
-                          <li>
-                              <a href="#">Support</a>
-                          </li>
-                          <li>
-                              <a href="#">Docs</a>
-                          </li>
-                          <li>
-                              <a href="#">Status</a>
-                          </li>
-                          <li>
-                              <a href="#">API Reference</a>
-                          </li>
-                          <li>
-                              <a href="#">Tech Requirements</a>
-                          </li>
-                      </ul>
-                  </div>
-
-                  <div class="footer-col">
-                      <div class="footer-title">
-                          <h2>Resources</h2>
-                      </div>
-                      <ul class="footer-col-list">
-                          <li>
-                              <a href="#">
-                                  <i class="fa-solid fa-circle-info"></i>
-                                  Help
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <i class="fa-solid fa-user"></i>
-                                  Your Account
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <div class="footer-bottom">
-              <div class="container flex-and-align">
-                  <div class="breadcrumbs-container push-right">
-                      <ul class="breadcrumbs flex-and-align">
-                          <li>
-                              <a href="#">Privacy & Policy</a>
-                          </li>
-                          <li>></li>
-                          <li>
-                              <a href="#" class="highlighted">Terms</a>
-                          </li>
-                          <li>></li>
-                          <li>
-                              <a href="#">Site Map</a>
-                          </li>
-                      </ul>
-                  </div>
-                  <div class="social-media-container ">
-                      <ul class="media-links flex-and-align">
-                          <li>
-                              <a href="#">
-                                  <i class="fa-brands fa-facebook-f"></i>
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#" class="icon-selected">
-                                  <i class="fa-brands fa-google"></i>
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <i class="fa-brands fa-twitter"></i>
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <i class="fa-brands fa-github"></i>
-                              </a>
-                          </li>
-                          <li class="mobile-wrap">
-                              <select name="country" id="country">
-                                  <option value="US">United States</option>
-                              </select>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="footer-copyright">
-                  <div class="copyright-claim">
-                      <span>
-                          &#169;
-                      </span>
-                      Front. 2022 Responsive designs. All rights reserved. 
-                  </div>
-                  <div class="cookies-disclaimer">
-                      When you visit or interact with our sites, services or tools, we or our authorized services
-                      providers may <br> use cookies for storing information to help provide you with a better, 
-                      faster and safer experience and <br> for marketing purposes.
-                  </div>
-              </div>
-          </div>
-      </footer> -->
-      <!-- <script>
-          const nav = document.getElementById("topNav");
-
-          window.onscroll = function()
-          {
-              if(window.pageYOffset > 100)
-              {
-                  nav.classList.add('sticky');
-              }
-              else 
-              {
-                  nav.classList.remove("sticky");
-              }
-          }
-
-
-          const navButton = document.querySelector("button[aria-expanded]");
-
-          function toggleNav({ target })
-          {
-              const expanded = target.getAttribute("aria-expanded") === "true" || false;
-
-              navButton.setAttribute("aria-expanded", !expanded );
-          }
-
-          navButton.addEventListener("click",toggleNav);
-      </script> -->
+        <div id="devslopes-project-SaaS-website" class="screen-container swap-screen-container">
+            <ul class="options-menu-list">
+                <li class="options-menu-link" data-link="main-menu">
+                    Back to Main Menu
+                </li>
+                <li class="options-menu-link" data-link="portfolio-menu">
+                    Back to Portfolios
+                </li>
+            </ul>
+        </div>
     </section>
     <script src="./src/js/index.js" async defer></script>
-  </body>
+</body>
+
 </html>

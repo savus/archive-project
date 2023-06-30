@@ -39,8 +39,10 @@ const setActive = (elm, selector, isDelayed = false, timingDelay = 300) => {
 const connectMenuLinks = (menuList) => {
    menuList.addEventListener('click', function(e) {
       const dataLink = e.target.dataset.link;
-      const elementToSwap = document.getElementById(dataLink);
-      setActive(elementToSwap, swapScreenSelector, true, menuDelay);
+      if (dataLink !== null) {
+         const elementToSwap = document.getElementById(dataLink);
+         setActive(elementToSwap, swapScreenSelector, true, menuDelay);
+      }
    });
 };
 
