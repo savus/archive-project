@@ -21,7 +21,7 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <!-- <div
+    <div
       id="loading-screen-container"
       class="screen-container absolute-center"
       data-animation="loadFadeOut"
@@ -38,7 +38,7 @@
       <div id="loading-bar">
         <div id="loading-bar-inner" data-animation="loadBarRight"></div>
       </div>
-    </div> -->
+    </div>
     <div id="main-menu" class="screen-container swap-screen-container absolute-center" data-animation="swapFadeIn">
       <div class="options-menu" data-animation="swapFadeRight">
         <div class="options-menu-header">
@@ -46,10 +46,10 @@
         </div>
         <div class="options-menu-body">
           <ul class="options-menu-list">
-            <li class="options-menu-link">One</li>
-            <li class="options-menu-link">One</li>
-            <li class="options-menu-link">One</li>
-            <li class="options-menu-link">One</li>
+            <li class="options-menu-link" data-link="games-menu">Games Menu</li>
+            <li class="options-menu-link" data-link="apps-menu">Apps Menu</li>
+            <li class="options-menu-link" data-link="cheatsheets-menu">Cheatsheets</li>
+            <li class="options-menu-link" data-link="portfolio-menu">Portfolio</li>
           </ul>
         </div>
       </div>
@@ -61,10 +61,55 @@
         </div>
         <div class="options-menu-body">
           <ul class="options-menu-list">
-            <li class="options-menu-link">One</li>
-            <li class="options-menu-link">One</li>
-            <li class="options-menu-link">One</li>
-            <li class="options-menu-link">One</li>
+            <li class="options-menu-link" data-link="main-menu">Main Menu</li>
+            <li class="options-menu-link" data-link="battleship-game">Battleship</li>
+            <li class="options-menu-link" data-link="rps-game">Rock Paper Scissors</li>
+            <li class="options-menu-link" data-link="text-game">Text Based RPG</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="apps-menu" class="screen-container swap-screen-container absolute-center" data-animation="swapFadeIn">
+      <div class="options-menu" data-animation="swapFadeRight">
+        <div class="options-menu-header">
+          <div>Apps Menu</div>
+        </div>
+        <div class="options-menu-body">
+          <ul class="options-menu-list">
+            <li class="options-menu-link" data-link="main-menu">Main Menu</li>
+            <li class="options-menu-link" data-link="to-do-app">To Do App</li>
+            <li class="options-menu-link" data-link="">App2</li>
+            <li class="options-menu-link" data-link="">App3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="portfolio-menu" class="screen-container swap-screen-container absolute-center" data-animation="swapFadeIn">
+      <div class="options-menu" data-animation="swapFadeRight">
+        <div class="options-menu-header">
+          <div>Portfolio Menu</div>
+        </div>
+        <div class="options-menu-body">
+          <ul class="options-menu-list">
+            <li class="options-menu-link" data-link="main-menu">Main Menu</li>
+            <li class="options-menu-link" data-link="">Project 1</li>
+            <li class="options-menu-link" data-link="">Project 2</li>
+            <li class="options-menu-link" data-link="">Project 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="cheatsheets-menu" class="screen-container swap-screen-container absolute-center" data-animation="swapFadeIn">
+      <div class="options-menu" data-animation="swapFadeRight">
+        <div class="options-menu-header">
+          <div>Cheatsheets Menu</div>
+        </div>
+        <div class="options-menu-body">
+          <ul class="options-menu-list">
+            <li class="options-menu-link" data-link="main-menu">Main Menu</li>
+            <li class="options-menu-link" data-link="git-hub">Git Hub</li>
+            <li class="options-menu-link" data-link="css">CSS</li>
+            <li class="options-menu-link" data-link="bash">Bash</li>
           </ul>
         </div>
       </div>

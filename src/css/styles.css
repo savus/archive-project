@@ -49,10 +49,15 @@ body {
 .swap-screen-container {
   visibility:hidden;
   opacity:0;
-  transition: all 0.4s;
+  transition: all linear .4s;
 }
 
-.options-menu {
+.swap-screen-container.active {
+  visibility:visible;
+  opacity:1
+}
+
+.swap-screen-container .options-menu {
   width:500px;
   color:white;
   border:1px solid rgba(255,255,255,0.6);
@@ -63,7 +68,15 @@ body {
   text-shadow:1px 0px 5px rgb(0,0,0);
   overflow:hidden;
   transform:translate(-50%);
-  transition:all 0.3s;
+  transition:all linear 0.3s;
+  visibility:hidden;
+  opacity:0;
+}
+
+.swap-screen-container.active .options-menu {
+  transform:translate(0);
+  visibility: visible;
+  opacity:1;
 }
 
 .options-menu-header {
@@ -93,7 +106,7 @@ body {
   transform:translate(-120%);
 }
 
-.options-menu-list .options-menu-link.active {
+.swap-screen-container.active .options-menu-list .options-menu-link {
   animation:slideRightBack 1.2s forwards;
 }
 
@@ -140,14 +153,14 @@ body {
 [data-animation="swapFadeIn"] [data-animation="swapFadeRight"] {
   animation:swapFadeRight 0.8s linear 3s forwards;
 } */
-
+/* 
 [data-animation="swapFadeIn"].active {
   animation:swapFadeIn 0.8s linear forwards;
 }
 
 [data-animation="swapFadeIn"].active [data-animation="swapFadeRight"] {
   animation:swapFadeRight 0.8s linear forwards;
-}
+} */
 
 
 @keyframes loadFadeOut {
