@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Project: Website With API</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="Pokemon-Api-Css/base.css" />
+    <link rel="stylesheet" href="Pokemon-Api-Css/theme.css" />
+    <link rel="stylesheet" href="Pokemon-Api-Css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/062335cba3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <main>
+      <header class="site-header">
+        <nav class="navbar">
+          <h1>Pokemon Info Finder</h1>
+          <h3>
+             <a style="background-color: white" href="index.html">Home</a>
+          </h3>
+          <label for="search" class="search-container">
+            <input
+              autocomplete="off"
+              id="search"
+              type="text"
+              placeholder="Type in pokemon name..."
+            />
+            <i class="fas fa-search"></i>
+          </label>
+          <h3 class="types">
+            List of Types
+            <i class="fa-solid fa-chevron-down"></i>
+            <div class="type-container">
+              <ul class="list-of-types"></ul>
+            </div>
+          </h3>
+          <h3 class="favorites-btn" data-open="favorites">Go to favorites</h3>
+        </nav>
+      </header>
+      <section id="main">
+        <div class="filter-btns">
+          <button
+            href="#"
+            class="neon-button"
+            data-filter="main"
+            data-sortdir="asc"
+          >
+            Sort A-Z
+          </button>
+          <button
+            href="#"
+            class="neon-button"
+            data-filter="main"
+            data-sortdir="desc"
+          >
+            Sort Z-A
+          </button>
+        </div>
+        <div id="main-collection" class="collection-grid"></div>
+      </section>
+    </main>
+    <section id="favorites" class="full-site-modal" data-animation="zoomInOut">
+      <header class="modal-header">
+        <h3>Favorites</h3>
+        <i class="fas fa-times" data-close="favorites"></i>
+      </header>
+      <div class="filter-btns">
+        <button
+          href="#"
+          class="neon-button"
+          data-filter="favorite"
+          data-sortdir="asc"
+        >
+          Sort A-Z
+        </button>
+        <button
+          href="#"
+          class="neon-button"
+          data-filter="favorite"
+          data-sortdir="desc"
+        >
+          Sort Z-A
+        </button>
+      </div>
+      <div id="favorites-collection" class="collection-grid"></div>
+    </section>
+    <script src="Pokemon-Api-Js/main.js" async defer></script>
+  </body>
+</html>

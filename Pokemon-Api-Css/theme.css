@@ -1,0 +1,16 @@
+:root {
+   --bg: #000;
+   --bg-contrast:#fff;
+   --color-text:#161c2d;
+   --color-headings:#fff;
+   --color-neon-filter:hsl(186,100%,57%);
+   --color-neon-bg:hsl(0,0,0);
+   --tool-tip-bg:hsl(0, 100%, 38%);
+   --tool-tip-text:#000;
+   --list-height:0px;
+}
+
+#favorites-collection {
+   --tool-tip-bg: hsl(228, 94%, 47%);
+   --tool-tip-text:#fff;
+}

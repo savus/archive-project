@@ -150,23 +150,6 @@ body {
 [data-animation="loadFadeInOut"] {
   animation: loadFadeInOut 1.6s ease-in-out infinite;
 }
-/* 
-[data-animation="swapFadeIn"] {
-  animation:swapFadeIn 0.8s linear 3s forwards;
-}
-
-[data-animation="swapFadeIn"] [data-animation="swapFadeRight"] {
-  animation:swapFadeRight 0.8s linear 3s forwards;
-} */
-/* 
-[data-animation="swapFadeIn"].active {
-  animation:swapFadeIn 0.8s linear forwards;
-}
-
-[data-animation="swapFadeIn"].active [data-animation="swapFadeRight"] {
-  animation:swapFadeRight 0.8s linear forwards;
-} */
-
 
 @keyframes loadFadeOut {
   to {

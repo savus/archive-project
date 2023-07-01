@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="./Interactive-Website-Css/theme.css">
+      <link rel="stylesheet" href="./Interactive-Website-Css/base.css">
+      <link rel="stylesheet" href="./Interactive-Website-Css/styles.css">
+      <link rel="stylesheet" href="./Interactive-Website-Css/pages.css">
+   </head>
+   <body>
+      <!--[if lt IE 7]>
+         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <!--Theme change panel-->
+      <div class="theme-panel">
+         <div class="theme-body">
+            <span>Change Theme</span>
+            <div class="btn-group">
+               <button class="switcher-btn active" data-toggle="light">Light</button>
+               <button class="switcher-btn" data-toggle="dark">Dark</button>
+            </div>
+            <button class="theme-tab">
+               <i class="fas fa-chevron-left"></i>
+            </button>
+         </div>
+      </div>
+
+      <main class='site-wrapper'>
+         <header class="site-header">
+            <nav class="navbar"> 
+               <div class='brand-logo'>
+                  <a href='/'><h2>Folio.</h2></a>
+               </div>
+               <div class='navbar-nav'>
+                  <ul class='ul-defaults-none main-menu'>
+                     <a class = 'nav-item' href="index.html">Home</a>
+                     <li class = 'nav-item' data-open="about">About Me</li>
+                     <li class = 'nav-item' data-open="contact">Contact</li>
+                  </ul>
+               </div>
+            </nav>
+         </header>
+
+         <!-- Hero Section -->
+         <section class="hero-bg">
+            <div class="container">
+               <div class="hero-content">
+                  <div class="code-icon">
+                     <i class="fas fa-code"></i>
+                  </div>
+                  <h2 class="header-lg">Code. Eat. Sleep.</h2>
+                  <div class="sub-header">
+                     I create meaningful solutions for your brands and products.
+                     <br>
+                     Give your customers the best experience possible.
+                  </div>
+                  <div class="btn btn-primary round-pill">
+                     <a href="#" data-open="contact">Let's talk now.</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="portfolio-section">
+            <div class="search-container container">
+               <label for="search">
+                  <input autocomplete="off" id="search" type="text" class="search-input" placeholder="Search...">
+                  <i class="fas fa-search"></i>
+               </label>
+               <ul class="portfolio-filter-nav ul-defaults-none">
+                  <li data-filter="all" class="filter-link">All Work</li>
+                  <li data-filter="web" class="filter-link">Web Development</li>
+                  <li data-filter="app" class="filter-link">App Development</li>
+                  <li data-filter="ui" class="filter-link">UI Design</li>
+               </ul>
+            </div>
+
+            <div class="portfolio-grid">
+
+               <div class="portfolio-card" data-item="web" data-open="web-1">
+                  <div class="card-body">
+                     <img src="./Interactive-Website-Images/portfolio-1.jpg" alt="portfolio-icon">
+                     <div class="card-popup-box">
+                        <div>Web Development</div>
+                        <h3>Food Website</h3>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="portfolio-card" data-item="web" data-open="web-2">
+                  <div class="card-body">
+                     <img src="./Interactive-Website-Images/portfolio-2.jpg" alt="portfolio-icon">
+                     <div class="card-popup-box">
+                        <div>Web Development</div>
+                        <h3>Skate Website</h3>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="portfolio-card" data-item="web" data-open="web-3">
+                  <div class="card-body">
+                     <img src="./Interactive-Website-Images/portfolio-3.jpg" alt="portfolio-icon">
+                     <div class="card-popup-box">
+                        <div>Web Development</div>
+                        <h3>Eating Website</h3>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="portfolio-card" data-item="ui" data-open="ui-1">
+                  <div class="card-body">
+                     <img src="./Interactive-Website-Images/portfolio-4.jpg" alt="portfolio-icon">
+                     <div class="card-popup-box">
+                        <div>UI Design</div>
+                        <h3>Cool Design</h3>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="portfolio-card" data-item="app" data-open="app-1">
+                  <div class="card-body">
+                     <img src="./Interactive-Website-Images/portfolio-5.jpg" alt="portfolio-icon">
+                     <div class="card-popup-box">
+                        <div>App Development</div>
+                        <h3>Game App</h3>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="portfolio-card" data-item="app" data-open="app-2">
+                  <div class="card-body">
+                     <img src="./Interactive-Website-Images/portfolio-6.jpg" alt="portfolio-icon">
+                     <div class="card-popup-box">
+                        <div>App Development</div>
+                        <h3>Gambling App</h3>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="portfolio-card" data-item="app" data-open="app-3">
+                  <div class="card-body">
+                     <img src="./Interactive-Website-Images/portfolio-7.jpg" alt="portfolio-icon">
+                     <div class="card-popup-box">
+                        <div>App Development</div>
+                        <h3>Money Website</h3>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="portfolio-card" data-item="ui" data-open="ui-2">
+                  <div class="card-body">
+                     <img src="./Interactive-Website-Images/portfolio-8.jpg" alt="portfolio-icon">
+                     <div class="card-popup-box">
+                        <div>UI Design</div>
+                        <h3>Fantastic Design</h3>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+
+         <section class="reviews">
+            <div class="review-title">What people say</div>
+            <h2 class="header-md">Trusted by clients.</h2>
+            <div class="review-preview">
+               <img src="./Interactive-Website-Images/cube.png" alt="cube">
+            </div>
+
+            <div class="review-carousel">
+
+               <div class="review-item">
+                  <div class="review-text">
+                     #1 Folio Designer is a clean and creative landing page.
+                  </div>
+                  <div class="review-author">
+                     <div class="avatar">
+                        <img src="./Interactive-Website-Images/ava-1.jpg" alt="avatar">
+                     </div>
+                     <div class="details">
+                        <div class="author-name">Jason Brewer</div>
+                        <div class="company-name">Skate World Wide</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="review-item">
+                  <div class="review-text">
+                     #2 Folio Designer is a clean and creative landing page.
+                  </div>
+                  <div class="review-author">
+                     <div class="avatar">
+                        <img src="./Interactive-Website-Images/ava-1.jpg" alt="avatar">
+                     </div>
+                     <div class="details">
+                        <div class="author-name">John Doe</div>
+                        <div class="company-name">Skate Nation</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="review-item">
+                  <div class="review-text">
+                     #3 Folio Designer is a clean and creative landing page.
+                  </div>
+                  <div class="review-author">
+                     <div class="avatar">
+                        <img src="./Interactive-Website-Images/ava-1.jpg" alt="avatar">
+                     </div>
+                     <div class="details">
+                        <div class="author-name">Jane Doe</div>
+                        <div class="company-name">Skate Nation</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="review-item">
+                  <div class="review-text">
+                     #4 Folio Designer is a clean and creative landing page.
+                  </div>
+                  <div class="review-author">
+                     <div class="avatar">
+                        <img src="./Interactive-Website-Images/ava-1.jpg" alt="avatar">
+                     </div>
+                     <div class="details">
+                        <div class="author-name">Hello World</div>
+                        <div class="company-name">Skate Dang</div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+            <div class="slide-ctrl-container">
+               <button>
+                  <i class="fas fa-arrow-left"></i>
+               </button>
+               <button>
+                  <i class="fas fa-arrow-right"></i>
+               </button>
+            </div>
+
+         </section>
+
+         <!-- Modals -->
+         <!-- About Page -->
+         <div id="about" class="full-site-modal page-block" data-animation="zoomInOut">
+            <div class="contianer-fluid">
+               <header class="modal-header">
+                  <h3>ABOUT PAGE</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/img4.jpg" alt="head shot">
+                  </div>
+                  <div class="about-text">
+                     <h2 class="header-md">Justin Clemons</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                     <div class="contact-me-block">
+                        <div>Email Me:</div>
+                        <a href="mailto:justin.fuzzygreenstuff@gmail.com">justin.fuzzygreenstuff@gmail.com</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="marquee">
+                  <ul class="marquee-content">
+                     <li>
+                        <i class="fab fa-github"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-codepen"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-react"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-dev"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-vuejs"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-angular"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-node"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-aws"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-docker"></i>
+                     </li>
+                     <li>
+                        <i class="fab fa-android"></i>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+   
+         <!-- Contact Page Modal-->
+         <div id='contact' class="full-site-modal page-block" data-animation="zoomInOut">
+            <div class="container-fluid">
+               <header class="modal-header">
+                  <h3>Contact PAGE</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="contact-text">
+                     <h2 class="header-md">Jason Brewer</h2>
+                     <div>Have a project or question? Send me a message.</div>
+                     <div>I will reply within 48 hours.</div>
+                  </div>
+                  <form action="" class="folio-form">
+                     <input class="form-control" name="name" type="text" placeholder="Name">
+                     <input class="form-control" name="email" type="email" placeholder="Email">
+                     <input class="form-control" name="subject" type="text" placeholder="Subject">
+                     <textarea name="message" cols="30" rows="3" placeholder="Write your message..."></textarea>
+                     <input type="submit" value="Send" class="btn btn-primary round-pill form-control">
+                  </form>
+               </div>
+            </div>
+         </div>
+
+         <!-- Popup Modals -->
+         <div id="web-1" class="modal" data-animation="slideInOutTop">
+            <div class="modal-dialog">
+               <header class="modal-header">
+                  <h3>Web Project 1</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/portfolio-1.jpg" alt="portfoio image">
+                  </div>
+                  <div class="text-wrapper">
+                     <p>
+                        <strong>
+                           My first awesome website
+                        </strong>
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="web-2" class="modal" data-animation="slideInOutTop">
+            <div class="modal-dialog">
+               <header class="modal-header">
+                  <h3>Web Project 2</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/portfolio-2.jpg" alt="portfoio image">
+                  </div>
+                  <div class="text-wrapper">
+                     <p>
+                        <strong>
+                           My first awesome website
+                        </strong>
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="web-3" class="modal" data-animation="slideInOutTop">
+            <div class="modal-dialog">
+               <header class="modal-header">
+                  <h3>Web Project 3</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/portfolio-3.jpg" alt="portfoio image">
+                  </div>
+                  <div class="text-wrapper">
+                     <p>
+                        <strong>
+                           My first awesome website
+                        </strong>
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="app-1" class="modal" data-animation="slideInOutTop">
+            <div class="modal-dialog">
+               <header class="modal-header">
+                  <h3>App Project 1</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/portfolio-4.jpg" alt="portfoio image">
+                  </div>
+                  <div class="text-wrapper">
+                     <p>
+                        <strong>
+                           My first awesome website
+                        </strong>
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="app-2" class="modal" data-animation="slideInOutTop">
+            <div class="modal-dialog">
+               <header class="modal-header">
+                  <h3>App Project 2</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/portfolio-5.jpg" alt="portfoio image">
+                  </div>
+                  <div class="text-wrapper">
+                     <p>
+                        <strong>
+                           My first awesome website
+                        </strong>
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="app-3" class="modal" data-animation="slideInOutTop">
+            <div class="modal-dialog">
+               <header class="modal-header">
+                  <h3>App Project 3</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/portfolio-6.jpg" alt="portfoio image">
+                  </div>
+                  <div class="text-wrapper">
+                     <p>
+                        <strong>
+                           My first awesome website
+                        </strong>
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="ui-1" class="modal" data-animation="slideInOutTop">
+            <div class="modal-dialog">
+               <header class="modal-header">
+                  <h3>UI Project 1</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/portfolio-7.jpg" alt="portfoio image">
+                  </div>
+                  <div class="text-wrapper">
+                     <p>
+                        <strong>
+                           My first awesome website
+                        </strong>
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="ui-2" class="modal" data-animation="slideInOutTop">
+            <div class="modal-dialog">
+               <header class="modal-header">
+                  <h3>UI Project 2</h3>
+                  <i class="fas fa-times" data-close></i>
+               </header>
+               <div class="modal-body">
+                  <div class="img-wrapper">
+                     <img src="./Interactive-Website-Images/portfolio-8.jpg" alt="portfoio image">
+                  </div>
+                  <div class="text-wrapper">
+                     <p>
+                        <strong>
+                           My first awesome website
+                        </strong>
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                     <p>
+                        I create meaningful solutions for your brands and products.
+                        Give your customers the best experience possible. 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         
+
+      </main>
+
+
+      
+      <script src="./Interactive-Website-Js/main.js" async defer></script>
+      <!-- <script src="js/carousel.js" async defer></script> -->
+   </body>
+</html>
