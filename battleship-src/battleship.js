@@ -47,3 +47,26 @@ const drawGrid = (element, grid) => {
 };
 
 drawGrid(player1, grid);
+
+const shipData = [
+   {name: 'destroyer', length: 2}, 
+   {name: 'submarine', length: 3}, 
+   {name: 'cruiser', length: 3},
+   {name: 'battleship', length: 4}, 
+   {name: 'carrier', length: 5}
+];
+
+class Ship {
+   constructor(name, length) {
+      this.name = name;
+      this.length = length;
+   }
+}
+
+const createShips = () => {
+   return shipData.map((stat) => new Ship(stat.name, stat.length));
+}
+
+const player1Ships = createShips();
+
+
