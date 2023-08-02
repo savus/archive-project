@@ -1,3 +1,23 @@
+
 .board-header {
    padding-left:12px;
 }
+
+#player-1 {
+   border:1px solid black;
+   width:780px;
+}
+
+.cell-row {
+   display:flex;
+}
+
+.cell-row div {
+   width:30px;
+   height:30px;
+   border:1px solid black;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+
