@@ -38,7 +38,7 @@ const drawGrid = (parent, grid) => {
    const header = createHeaders(grid);
    parent.appendChild(header);
 
-   for (let i = 0; i <= grid.length; i++) {
+   for (let i = 0; i < grid.length; i++) {
       const cellRow = document.createElement('div');
       const firstCell = document.createElement('div');
       cellRow.classList.add('cell-row');
