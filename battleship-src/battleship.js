@@ -3,9 +3,13 @@ const player1Id = 'player-1';
 const player1 = document.getElementById(player1Id);
 const boardSymbols = {
    'empty' : '-',
+   'occupied' : 'H',
    'hit' : 'X',
-   'occupied' : 'O'
-}
+   'miss' : 'O'
+};
+
+
+
 const createGrid = (gridSize) => {
    const grid = [];
    for (let i = 0; i <= gridSize; i++) {
@@ -17,31 +21,32 @@ const createGrid = (gridSize) => {
    return grid;
 }
 
-const grid1 = createGrid(25);
-
 const createHeaders = (grid) => {
-   const headerContainer = document.createElement('div');
-   headerContainer.classList.add('cell-row');
-   const firstCell = document.createElement('div');
-   firstCell.innerText = ' - ';
-   headerContainer.appendChild(firstCell);   
-   for (let i = 0; i < grid.length; i++) {
-      const cell = document.createElement('div');
-      cell.innerText = `${alphabetList[i]}`;
-      headerContainer.appendChild(cell);
-   }
-   return headerContainer;
-}
+   const headerRow = document.createElement('div');
+   headerRow.classList.add('cell-row');
 
+   const firstCell = document.createElement('div');
+   firstCell.innerText = '-';
+
+   headerRow.appendChild(firstCell);
+
+   for (let i = 0; i <= grid.length; i++) {
+      const cell = document.createElement('div');
+      cell.innerText = alphabetList[i];
+      headerRow.appendChild(cell);
+   }
+   
+   return headerRow;
+};
 
 const drawGrid = (parent, grid) => {
    const header = createHeaders(grid);
    parent.appendChild(header);
-
-   for (let i = 0; i <= grid.length; i++) {
+   for (let i = 0; i < grid.length; i++) {
       const cellRow = document.createElement('div');
-      const firstCell = document.createElement('div');
       cellRow.classList.add('cell-row');
+      
+      const firstCell = document.createElement('div');
       firstCell.innerText = i;
       cellRow.appendChild(firstCell);
 
@@ -50,15 +55,14 @@ const drawGrid = (parent, grid) => {
          cellDiv.innerText = boardSymbols[cell.status];
          cellRow.appendChild(cellDiv);
       }
+
       parent.appendChild(cellRow);
    }
-
 }
 
+const grid1 = createGrid(alphabetList.length - 2);
+
 drawGrid(player1, grid1);
-
-
-
 
 
 
