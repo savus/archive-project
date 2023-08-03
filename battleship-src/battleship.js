@@ -44,13 +44,9 @@ const drawGrid = (parent, grid) => {
     const cellRow = document.createElement("div");
     cellRow.classList.add("cell-row");
 
-   for (let i = 0; i < grid.length; i++) {
-      const cellRow = document.createElement('div');
-      const firstCell = document.createElement('div');
-      cellRow.classList.add('cell-row');
-      firstCell.innerText = i;
-      cellRow.appendChild(firstCell);
-   }
+    const firstCell = document.createElement("div");
+    firstCell.innerText = i;
+    cellRow.appendChild(firstCell);
 
     for (const cell of grid[i]) {
       const cellDiv = document.createElement("div");
