@@ -59,54 +59,81 @@ const drawGrid = (parent, grid) => {
 };
 
 const eraseGrid = (parent) => {
-  parent.innerHTML = "";
+   parent.innerHTML = "";
 };
 
-const resetGrid = (parent, grid) => {
-  eraseGrid(parent);
-  drawGrid(parent, grid);
+const redrawGrid = (parent, grid) => {
+   eraseGrid(parent);
+   drawGrid(parent, grid);
 };
 
-const randomizeCoords = (gridSize) => {
-  const coords = [
-    Math.floor(Math.random() * gridSize),
-    Math.floor(Math.random() * gridSize),
-  ];
-  return coords;
+const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+
+const validatePlacement = (grid, col, row, ship) => {
+   for (let i = 0; i < ship.length; i++) {
+      const indexX = (ship.isHorizontal) ? i : 0;
+      const indexY = (!ship.isHorizontal) ? i : 0;
+      if (grid[col + indexY][row + indexX].status !== 'empty') return false;
+   }
+   return true;
 };
 
-const getStartingPoint = (grid) => {
-  const [col, row] = randomizeCoords(grid.length);
-  if (grid[col][row].status !== "empty") return getStartingPoint(grid);
-  return [col, row];
-};
+const placePieces = (grid, col, row, ship) => {
+   for (let i = 0; i < ship.length; i++) {
+      const indexX = (ship.isHorizontal) ? i : 0;
+      const indexY = (!ship.isHorizontal) ? i : 0;
+      grid[col + indexY][row + indexX].status = 'occupied';
+   }
+}
 
-const checkAvailableSpaces = (grid, shipLength) => {
-  const [col, row] = getStartingPoint(grid);
-  for (let i = 0; i < shipLength; i++) {
-    if (
-      grid[col][row + i].status !== "empty" ||
-      grid[col][row + i].x + 1 >= grid.length
-    )
-      return checkAvailableSpaces(grid, shipLength);
-  }
-  return [col, row];
-};
+const placeShip = (parent, grid, ship) => {
+   let row = getRandomInt(grid.length);
+   let col = getRandomInt(grid.length);
+   let direction = (ship.isHorizontal) ? row : col;
 
-const placeShips = (parent, grid, shipLength) => {
-  const [col, row] = checkAvailableSpaces(grid, shipLength);
-  for (let i = 0; i < shipLength; i++) {
-    grid[col][row + i].status = "occupied";
-  }
-  resetGrid(parent, grid);
-};
+   //Keep ship within grid walls
+   if (direction + ship.length > grid.length) {
+      (ship.isHorizontal) ? row = grid.length - ship.length : col = grid.length - ship.length
+   }
+
+   //if all placements are not valid, recur placeShip function
+   if (!validatePlacement(grid, col, row, ship)) return placeShip(parent, grid, ship);
+
+   placePieces(grid, col, row, ship);
+
+   redrawGrid(parent, grid)
+
+}
+
+class Ship {
+   constructor(name, length) {
+      this.name = name;
+      this.length = length;
+      this.isHorizontal = Math.random() <= 0.5;
+      this.lives = this.length;
+   }
+}
+
+const shipData = [
+   {name: 'destroyer', length: 2}, 
+   {name: 'submarine', length: 3}, 
+   {name: 'cruiser', length: 3}, 
+   {name: 'battleship', length: 4}, 
+   {name: 'carrier', length: 5}, 
+];
+
+const ships = [];
+
+shipData.forEach((data) => ships.push(new Ship(data.name, data.length)));
+
+let numberOfShips = ships.length;
+
 
 const grid1 = createGrid(10);
 
 drawGrid(player1, grid1);
 
-for (let i = 0; i < 5; i++) placeShips(player1, grid1, 5);
-
+ships.forEach((ship) => placeShip(player1, grid1, ship))
 // const alphabetList = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 // const player1Id = 'player-1';
 // const player1 = document.getElementById(player1Id);
