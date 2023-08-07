@@ -82,6 +82,7 @@ const placePieces = (grid, col, row, ship) => {
    for (let i = 0; i < ship.length; i++) {
       const indexX = (ship.isHorizontal) ? i : 0;
       const indexY = (!ship.isHorizontal) ? i : 0;
+      ship.locations.push({y : col + indexY, x : row + indexX})
       grid[col + indexY][row + indexX].status = 'occupied';
    }
 }
@@ -111,6 +112,7 @@ class Ship {
       this.length = length;
       this.isHorizontal = Math.random() <= 0.5;
       this.lives = this.length;
+      this.locations = [];
    }
 }
 
@@ -128,79 +130,17 @@ shipData.forEach((data) => ships.push(new Ship(data.name, data.length)));
 
 let numberOfShips = ships.length;
 
+const logShipLocations = (shipList) => {
+   shipList.forEach((ship) => {
+      console.log(ship.name);
+      for (let location of ship.locations) {
+         console.log('x: ' + location.x, 'y: ' + location.y);
+      }
+   })
+}
 
 const grid1 = createGrid(10);
 
 drawGrid(player1, grid1);
 
 ships.forEach((ship) => placeShip(player1, grid1, ship))
-// const alphabetList = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-// const player1Id = 'player-1';
-// const player1 = document.getElementById(player1Id);
-// const boardSymbols = {
-//    'empty': ' -- ',
-//    'hit': 'X',
-//    'miss': 'O',
-//    'occupied': 'H'
-// };
-
-// const createGrid = (gridSize) => {
-//    const grid = [];
-//    for (let i = 0; i < gridSize; i++) {
-//       grid[i] = [];
-//       for (let j = 0; j < gridSize; j++) {
-//          grid[i][j] = {x: j, y: i, status: "empty"};
-//       }
-//    }
-//    return grid;
-// };
-
-// const grid = createGrid(10);
-
-// const createHeader = (grid) => {
-//    let header = `<div class='board-header'> `;
-//    for (let i = 0; i < grid.length; i++) {
-//       header += ` | ${alphabetList[i]}`;
-//    }
-//    header += '</div>';
-//    return header;
-// }
-
-// const drawGrid = (element, grid) => {
-//    let child = '<div>';
-//    const header = createHeader(grid);
-//    child += ` ${header} `;
-//    for (let i = 0; i < grid.length; i++) {
-//       let gridRow = `<div>${i + 1} |`;
-//       for (let cell of grid[i]) {
-//          gridRow += ` ${boardSymbols[cell.status]} |`;
-//       }
-//       gridRow += '</div>';
-//       child += gridRow;
-//    }
-//    child += '</div>';
-//    element.innerHTML = child;
-// };
-
-// drawGrid(player1, grid);
-
-// const shipData = [
-//    {name: 'destroyer', length: 2},
-//    {name: 'submarine', length: 3},
-//    {name: 'cruiser', length: 3},
-//    {name: 'battleship', length: 4},
-//    {name: 'carrier', length: 5}
-// ];
-
-// class Ship {
-//    constructor(name, length) {
-//       this.name = name;
-//       this.length = length;
-//    }
-// }
-
-// const createShips = () => {
-//    return shipData.map((stat) => new Ship(stat.name, stat.length));
-// }
-
-// const player1Ships = createShips();
