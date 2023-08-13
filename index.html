@@ -11,8 +11,8 @@
   <title>Archive Project</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- <link rel="stylesheet" href="./src/css/base.css" />
-  <link rel="stylesheet" href="./src/css/theme.css" />
+  <link rel="stylesheet" href="./src/css/base.css" />
+  <!-- <link rel="stylesheet" href="./src/css/theme.css" />
   <link rel="stylesheet" href="./src/css/styles.css" /> -->
   <link rel="stylesheet" href="./battleship-src/battleship.css">
 
@@ -137,15 +137,22 @@
 
   <!--Games Section-->
   <section>
-    <div id="battleship-game" class="screen-container swap-screen-container absolute-center active"
+    <div id="battleship-game" class="screen-container swap-screen-container active"
       data-animation="swapFadeIn">
-      <div id="player-1" class="battleship-container">
-      </div>
-      <div>
-        <span id="player-1-grid-message">Message</span>
-      </div>
-      <input type="text" id="player-1-grid-prompt">
-      <button id="button-prompt">Submit</button>
+        <div class="boards-container">
+          <div id="player-1" class="battleship-container">
+          </div>
+          <div>
+            <span id="player-1-grid-message">Message</span>
+          </div>
+          <input type="text" id="player-1-grid-prompt">
+          <button id="player-1-button-prompt">Submit</button>
+        </div>
+        <div class="boards-container">
+          <div id="computer" class="battleship-container">
+          </div>
+        </div>
+       
     </div>
   </section>
 
